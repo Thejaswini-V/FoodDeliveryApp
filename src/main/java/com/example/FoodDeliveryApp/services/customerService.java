@@ -5,29 +5,28 @@ import com.example.FoodDeliveryApp.repositories.customerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
 @Service
 public class customerService {
     @Autowired
-    customerRepository customer_Repository;
-    public Iterable<customerModel> selectAll(){
-        return customer_Repository.findAll();
+    private customerRepository customerRepository;
+
+    public Iterable<customerModel> selectAll() {
+        return customerRepository.findAll();
     }
-    public customerModel insertOne(customerModel customer_Model){
-        return customer_Repository.save(customer_Model);
+
+    public customerModel insertOne(customerModel customerModel) {
+        return customerRepository.save(customerModel);
     }
 
     public customerModel findByEmail(String email) {
-        return customer_Repository.findByCustMail(email);
+        return customerRepository.findByCustMail(email);
     }
 
-    public boolean validatelogin(String mail, String password) {
+    public boolean validateLogin(String mail, String password) {
         customerModel account = findByEmail(mail);
-        if (account != null && account.getCust_pswd().equals(password)) {
+        if (account != null && account.getCustPswd().equals(password)) {
             return true;
         }
         return false;
     }
 }
-
-
