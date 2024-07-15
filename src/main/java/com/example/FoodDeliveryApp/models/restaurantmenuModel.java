@@ -8,7 +8,7 @@ import java.sql.Time;
 @Data
 @Entity
 @Table(name = "Restaurant_menu")
-public class restuarantmenuModel {
+public class restaurantmenuModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "rest_id")
