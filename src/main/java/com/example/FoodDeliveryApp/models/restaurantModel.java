@@ -8,7 +8,6 @@ import lombok.Data;
 public class restaurantModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "rest_id")
     private int restId;
 
     @Column(name = "rest_name", nullable = false)

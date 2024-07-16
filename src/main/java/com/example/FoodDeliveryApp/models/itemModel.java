@@ -8,7 +8,6 @@ import lombok.Data;
     public class itemModel {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
-        @Column(name = "food_id")
         private int foodId;
 
         @Column(name = "food_name", nullable = false, unique = true)

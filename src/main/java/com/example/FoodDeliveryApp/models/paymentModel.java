@@ -9,7 +9,6 @@ import lombok.Data;
 public class paymentModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "payment_id")
     private int paymentId;
 
     @Column(name = "order_id")

@@ -8,7 +8,7 @@ import lombok.Data;
 @Entity
 public class customerModel {
     @Id
-    @Column(name = "cust_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int custId;
 
     @Column(name = "cust_name")
@@ -21,7 +21,7 @@ public class customerModel {
     private String custMail;
 
     @Column(name = "cust_phone")
-    private int custPhone;
+    private long custPhone;
 
     @Column(name = "cust_pswd")
     private String custPswd;

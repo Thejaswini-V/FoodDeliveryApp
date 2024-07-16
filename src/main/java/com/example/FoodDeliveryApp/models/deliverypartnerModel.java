@@ -9,7 +9,6 @@ import lombok.Data;
 public class deliverypartnerModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "delivery_id")
     private int deliveryId;
 
     @Column(name = "delivery_phn")

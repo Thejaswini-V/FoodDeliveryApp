@@ -10,8 +10,7 @@ import java.sql.Time;
 @Table(name = "Restaurant_menu")
 public class restaurantmenuModel {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "rest_id")
+    @Column(name="rest_id")
     private int restId;
 
     @Column(name = "food_id")
